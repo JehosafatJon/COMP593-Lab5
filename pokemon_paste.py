@@ -16,7 +16,7 @@ Description:
     pastebin.
 
 Usage:
-    python lab5.py <pokemon>
+    python pokemon_paste.py <pokemon>
 
 Parameters:
     pokemon (str or int) = A pokemon name (str) or pokedex number (int)
