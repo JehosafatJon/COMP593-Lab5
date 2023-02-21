@@ -21,7 +21,7 @@ Usage:
 Parameters:
     pokemon (str or int) = A pokemon name (str) or pokedex number (int)
 
-~~~~~~ Jonathan Hughes COMP086 ~~~"""
+~~~~~~ Jonathan Hughes COMP086  ~~~"""
 
 from sys import argv
 from pastebin_api import create_new_paste
