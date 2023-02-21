@@ -9,7 +9,7 @@
 
 Description:
     Accepts a pokemon name or pokedex 
-    entry for a pokemon retreives 
+    entry for a pokemon, retreives 
     information about that pokemon 
     from PokeApi, and writes a bullet 
     point list of their abilities to 
@@ -31,6 +31,11 @@ def main():
     # Get the pokemon name from the command line
     search_term = get_search_term()
 
+    # Exit if input parameter is not a word or number
+    if not search_term.strip().isalpha() and not search_term.strip().isdigit():
+        print("Error, incorrect format for search term!")
+        exit()
+
     # Fetch pokemon information from pokeapi
     pokemon_info = search_pokemon(search_term)
 
@@ -48,10 +53,10 @@ def main():
     pass
 
 def get_search_term():
-    """ Gets the search term (pokemon) from the command line parameter.
+    """ Gets the search term from the command line parameter.
 
-    returns:
-        (str) : The pokemon to search for
+    Returns:
+        (str) : The search term
     """
 
     if len(argv) < 2:
@@ -75,11 +80,10 @@ def get_paste_content(pokemon_info):
     title = f"{pokemon_info['name'].title()}'s Abilities"
 
     # Body of the paste
-    divider = '\n'
     body_text = ''
     for ability in pokemon_info['abilities']:
         body_text += "- " + ability['ability']['name'].title()
-        body_text += divider
+        body_text += '\n'
     
     return title, body_text.strip()
 

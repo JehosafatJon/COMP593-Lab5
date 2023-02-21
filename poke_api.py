@@ -25,7 +25,7 @@ def search_pokemon(search_term):
         return response.json() # returns dict of pokemon info
     else:
         print('Failed!')
-        print(f"Response code: {response.status_code}{response.reason}")
+        print(f"Response code: {response.status_code} {response.reason}")
     
     return 
     
