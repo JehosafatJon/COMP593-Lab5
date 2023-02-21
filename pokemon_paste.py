@@ -31,11 +31,6 @@ def main():
     # Get the pokemon name from the command line
     search_term = get_search_term()
 
-    # Exit if input parameter is not a word or number
-    if not search_term.strip().isalpha() and not search_term.strip().isdigit():
-        print("Error, incorrect format for search term!")
-        exit()
-
     # Fetch pokemon information from pokeapi
     pokemon_info = search_pokemon(search_term)
 
