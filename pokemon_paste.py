@@ -80,7 +80,7 @@ def get_paste_content(pokemon_info):
         body_text += "- " + ability['ability']['name'].title()
         body_text += '\n'
     
-    return title, body_text.strip()
+    return title, body_text.strip() # Strip to remove the unused new line
 
 if __name__ == '__main__':
     main()
